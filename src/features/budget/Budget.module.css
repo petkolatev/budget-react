@@ -117,6 +117,63 @@ tbody td.highlight {
   text-align: right;
 }
 
+.deltaPositive {
+  background-color: #dff7df;
+  color: #064f24;
+  text-align: right;
+}
+
+.deltaNegative {
+  background-color: #ffdede;
+  color: #6b0000;
+  text-align: right;
+}
+
+.rowHover td {
+  background-color: #e8f4ff;
+}
+
+.categoryItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  align-items: flex-start;
+}
+
+.categoryItem {
+  background: #f0f6ff;
+  border: 1px solid #d6e8ff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: normal;
+}
+
+.modalBackdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 16px;
+  border-radius: 6px;
+  min-width: 360px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+}
+
+.modalActions { display:flex; gap:8px; justify-content:flex-end; }
+.modalSelect { width: 100%; margin-left: 8px; }
+.modalInput { width: 100%; margin-left: 8px; }
+
 .sort {
   text-decoration: underline;
   cursor: pointer;

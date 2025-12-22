@@ -81,3 +81,39 @@ button:focus {
 button:active {
   background-color: #0e5dc4;
 }
+
+/* Top navigation */
+.topNav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f5f7fb;
+  padding: 12px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 16px;
+}
+.navTitle {
+  font-weight: 600;
+  color: #003781;
+}
+.navLinks {
+  display: flex;
+  gap: 8px;
+}
+.navLink {
+  background: #003781;
+  color: #eee;
+  border: 1px solid #003781;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.navLink:hover { border-color: #0e5dc4; }
+.navLinkActive {
+  background: #0e5dc4;
+}
+.pageContent {
+  width: 100%;
+  text-align: left;
+}

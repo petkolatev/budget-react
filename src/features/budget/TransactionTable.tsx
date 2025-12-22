@@ -7,6 +7,7 @@ export interface TransactionTableProps {
   received: number
   percentage: number
   title: string
+  onSelectText?: (text: string, field: 'contragent' | 'reason') => void
 }
 
 export function TransactionTable(props: TransactionTableProps) {
@@ -50,8 +51,8 @@ export function TransactionTable(props: TransactionTableProps) {
               </td>
               <td>{transaction.category}</td>
               <td>{transaction.document}</td>
-              <td>{transaction.contragent}</td>
-              <td>{transaction.reason}</td>
+              <td onDoubleClick={() => props.onSelectText?.(transaction.contragent, 'contragent')}>{transaction.contragent}</td>
+              <td onDoubleClick={() => props.onSelectText?.(transaction.reason, 'reason')}>{transaction.reason}</td>
               <td>{transaction.info}</td>
             </tr>
           )}

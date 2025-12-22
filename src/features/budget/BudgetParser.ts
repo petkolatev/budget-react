@@ -1,29 +1,13 @@
 import { Transaction } from './budgetSlice'
+import categories from './categories.json'
 
 const LINE_START_DEFAULT = 1
 
-export const Categories = [
-    ['Хранителни Покупки', 'Alex Trade', 'BILLA', 'METRO', 'LIDL', 'KAUFLAND', 'ALEX TRADE', 'STOP4ETO', '#DM', 'Metro Cash & Carry',
-        'BAHARICA', 'T-MARKET', 'LILLY', 'EBAG.BG', 'PRI RENA BAKERY', 'DZHOTO', 'PETROZARA'],
-    ['Здраве', 'SOPHARMACY', 'FARMA VISION', 'PHARMACY DARA 5 PLO', 'FRAMAR', 'MARESHKI'],
-    ['Транспорт', 'GAZPROM', 'OMV', 'SCHELL', 'PETROL', 'SHELL', 'INSAOIL', 'VAS OIL', 'LUKOIL', 'GAS STATIONS EKO', 'MOTION SERVICE', 'API BG TOLL', 'СКОРПИОН ИНС ООД', 'ITS VINETKI SOF'],
-    ['Ресторанти', 'JAGERHOF', 'HAPPY BAR & GRILL', 'JAPONICA', 'Q BAR', 'HAPPY BAR&GRILL', 'JEGERHOF', 'PLPLAZ', 'DOMINOS', 'UGOVSKIA',
-        'WEST COFFE PLAZA', 'GaleriaStara', 'GRAFIT', 'VIKTORIA', 'TORRO GRANDE', 'CONFETTI', 'EDO SUSH', 'BAR DINUR', 'TAMSHOUSE', 
-        'LA KUCHINA', 'Glovo'],
-    ['Банки', 'Теглене ПОС', 'FIB_ATM', 'UNICREDIT', 'ALLIANZ', 'Теглене ПОС BUL VASIL APRILOV'],
-    ['За работа', 'AY STAYL', 'КОМФОРТ', 'АВАНСОВО ДОД', 'ДЗПО', 'ДОО', 'ЗОВ', 'REGIONAL BUSINESS', 'Regus Kamenitza Park'],
-    ['Ежемесечни', 'МАТЕЙ', 'Бистра', 'EPAY A1 MOBILE', 'ИЗИПЕЙ', 'ATHLETIC FITNESS'],
-    ['Revolut','Revolut'],
-    ['Пазаруване', 'HITA', 'PEPCO', 'STUDIO MODERNA SOF', 'SPEEDY', 'TECHNOPOLIS', 'answear.bg', 'HUMANA', 'SPORT VISION', 'JUMBO', 
-        'TOM TAILOR', 'JAGERSHOP', 'PEPKO', 'ECONT', 'ART 93', 'H&M', 'ART 93', 'KRISTI STIL', 'SPIDI'],
-    ['Хоби', 'WEEKEND WOODWORKER', 'OZONE.BG', 'DECATLON', 'EVENTIM'],
-    ['Апартамент', 'Период.плащ.Нар.кред.превод', 'Такса за периодично плащане', 'Погасяване главница кредит',
-        'Погасяване редовна лихва кредит', 'PRAKTIKER', 'BRICOLAGE', 'BAUMAX', 'HOMEMAX', 'TULS OOD', 'HIPERMARKET RILA', 'PARKET STYLE',
-        'TOPLIVO', 'IZIDOR', 'СЪЛИВЕР'],
-    ['Чужбина', 'Плащане чрез ПОС чужбина'],
-    ['Такси', 'Такса за операция от тип', 'Такса Нар.превод,IB', 'Такса за нареден', 'Такса поддръжка карта'],
-    ['Без Категория']
-]
+export let Categories: string[][] = categories
+
+export function setCategories(newCategories: string[][]) {
+    Categories = newCategories
+}
 
 export const parse = (fileContent: string) => {
     const result: Transaction[] = []
